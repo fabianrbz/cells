@@ -23,7 +23,7 @@ module Cell
 
     def create(prefix, view)
       # puts "...checking #{prefix}/#{view}"
-      return unless File.exists?("#{prefix}/#{view}") # DISCUSS: can we use Tilt.new here?
+      return unless File.exist?("#{prefix}/#{view}") # DISCUSS: can we use Tilt.new here?
       Tilt.new("#{prefix}/#{view}", escape_html: false, escape_attrs: false)
     end
 
